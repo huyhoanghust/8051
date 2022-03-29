@@ -1,0 +1,54 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    03/02/2022  12:59:55  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEILC\C51\BIN\BL51.EXE .\Objects\Led on-off.obj TO .\Objects\Led on-off PRINT (.\Listings\Led on-off.m51)
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\Led on-off.obj (LED_ON_OFF)
+
+
+LINK MAP OF MODULE:  .\Objects\Led on-off (LED_ON_OFF)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0015H     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Led on-off (LED_ON_OFF)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        LED_ON_OFF
+  C:000EH         SYMBOL        CHECK1
+  C:0010H         SYMBOL        CHECK2
+  C:000CH         SYMBOL        DELAY
+  D:00A0H         SYMBOL        P2
+  C:0000H         SYMBOL        START
+  C:0000H         LINE#         3
+  C:0003H         LINE#         4
+  C:0005H         LINE#         5
+  C:0008H         LINE#         6
+  C:000AH         LINE#         7
+  C:000CH         LINE#         9
+  C:000EH         LINE#         11
+  C:0010H         LINE#         13
+  C:0012H         LINE#         14
+  C:0014H         LINE#         15
+  -------         ENDMOD        LED_ON_OFF
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0015H BYTE ( 1%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=21
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

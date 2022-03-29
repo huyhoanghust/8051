@@ -1,0 +1,53 @@
+A51 MACRO ASSEMBLER  LED_ON_OFF                                                           03/02/2022 12:59:55 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\Led on-off.obj
+ASSEMBLER INVOKED BY: D:\Keilc\C51\BIN\A51.EXE Led on-off.a51 SET(SMALL) DEBUG PRINT(.\Listings\Led on-off.lst) OBJECT(.
+                      \Objects\Led on-off.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 000H
+0000                   2     Start:
+0000 75A055            3             Mov     P2,#01010101b
+0003 110C              4             Acall   delay
+0005 75A0AA            5             Mov     P2,#10101010b
+0008 110C              6             Acall   delay
+000A 80F4              7             Sjmp    Start
+000C                   8     delay:
+000C 7FFF              9             Mov     R7,#0FFH
+000E                  10     Check1:
+000E 7EFF             11             Mov     R6,#0FFH
+0010                  12     Check2:
+0010 DEFE             13             Djnz    R6,Check2
+0012 DFFA             14             Djnz    R7,Check1
+0014 22               15             Ret
+                      16     End
+                             
+                                     
+                             
+                             
+                             
+                             
+                                     
+                                     
+A51 MACRO ASSEMBLER  LED_ON_OFF                                                           03/02/2022 12:59:55 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+CHECK1 . . . . . .  C ADDR   000EH   A   
+CHECK2 . . . . . .  C ADDR   0010H   A   
+DELAY. . . . . . .  C ADDR   000CH   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+START. . . . . . .  C ADDR   0000H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

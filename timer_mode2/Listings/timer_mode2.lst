@@ -1,0 +1,45 @@
+A51 MACRO ASSEMBLER  TIMER_MODE2                                                          03/05/2022 22:34:30 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\timer_mode2.obj
+ASSEMBLER INVOKED BY: D:\Keilc\C51\BIN\A51.EXE timer_mode2.a51 SET(SMALL) DEBUG PRINT(.\Listings\timer_mode2.lst) OBJECT
+                      (.\Objects\timer_mode2.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 000H
+                       2     ;T=200US => GIA TRI NAP LA 2^8-100US/1US=156=9C
+0000 758902            3             MOV     TMOD,#02H
+0003 758C9C            4             MOV     TH0,#09CH       
+0006                   5             LOOP:
+0006 D28C              6             SETB    TR0
+0008                   7             HERE:
+0008 308DFD            8             JNB     TF0,HERE
+000B C28D              9             CLR     TF0
+000D C28C             10             CLR     TR0
+000F B2B0             11             CPL     P3.0
+0011 80F3             12             SJMP    LOOP
+                      13     END
+                                     
+A51 MACRO ASSEMBLER  TIMER_MODE2                                                          03/05/2022 22:34:30 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+HERE . . . . . . .  C ADDR   0008H   A   
+LOOP . . . . . . .  C ADDR   0006H   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+TF0. . . . . . . .  B ADDR   0088H.5 A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

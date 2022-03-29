@@ -1,0 +1,41 @@
+A51 MACRO ASSEMBLER  TIMER                                                                03/05/2022 21:47:45 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\timer.obj
+ASSEMBLER INVOKED BY: D:\Keilc\C51\BIN\A51.EXE timer.a51 SET(SMALL) DEBUG PRINT(.\Listings\timer.lst) OBJECT(.\Objects\t
+                      imer.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 000H
+0000 758901            2      MOV TMOD,#01H ;choïn mode 1 timer 0 ñeám 16 bit 
+0003 758CFE            3      LOOP1: MOV TH0,#HIGH(-500) ;ñoä roäng xung 500µs 
+0006 758A0C            4      MOV TL0,#LOW(-500) ; 
+0009 D28C              5      SETB TR0 ;cho timer baét ñaàu ñeám 
+000B 308DFD            6      JNB TF0,$ ;chôø baùo ngaét 
+000E C28D              7      CLR TF0 ;xoùa côø ngaét 
+0010 B290              8      CPL P1.0 ;nghòch ñaûo bit p1.0 
+0012 80EF              9      SJMP LOOP1 ;quay trôû laïi thöïc hieän tieáp 
+                      10      END
+A51 MACRO ASSEMBLER  TIMER                                                                03/05/2022 21:47:45 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+LOOP1. . . . . . .  C ADDR   0003H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+TF0. . . . . . . .  B ADDR   0088H.5 A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+TL0. . . . . . . .  D ADDR   008AH   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

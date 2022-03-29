@@ -1,0 +1,57 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    03/05/2022  22:30:52  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEILC\C51\BIN\BL51.EXE .\Objects\timer_1ms.obj TO .\Objects\timer_1ms PRINT (.\Listings\timer_1ms.m51)
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\timer_1ms.obj (TIMER_1MS)
+
+
+LINK MAP OF MODULE:  .\Objects\timer_1ms (TIMER_1MS)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0018H     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\timer_1ms (TIMER_1MS)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        TIMER_1MS
+  C:000DH         SYMBOL        HERE
+  C:0005H         SYMBOL        LOOP
+  D:00B0H         SYMBOL        P3
+  B:0088H.5       SYMBOL        TF0
+  D:008CH         SYMBOL        TH0
+  D:008AH         SYMBOL        TL0
+  D:0089H         SYMBOL        TMOD
+  B:0088H.4       SYMBOL        TR0
+  C:0000H         LINE#         5
+  C:0002H         LINE#         6
+  C:0005H         LINE#         8
+  C:0008H         LINE#         9
+  C:000BH         LINE#         10
+  C:000DH         LINE#         12
+  C:0010H         LINE#         13
+  C:0012H         LINE#         14
+  C:0014H         LINE#         15
+  C:0016H         LINE#         16
+  -------         ENDMOD        TIMER_1MS
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0018H BYTE ( 1%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=24
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
